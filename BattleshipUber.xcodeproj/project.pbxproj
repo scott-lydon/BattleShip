@@ -13,6 +13,8 @@
 		7536E211246B6DB10002BB65 /* Ships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E210246B6DB10002BB65 /* Ships.swift */; };
 		7536E216246B880C0002BB65 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E215246B880C0002BB65 /* Rectangle.swift */; };
 		7536E218246B88310002BB65 /* PlacementResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E217246B88310002BB65 /* PlacementResult.swift */; };
+		7536E21A246CE85B0002BB65 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E219246CE85B0002BB65 /* Matrix.swift */; };
+		7536E21C246D07F10002BB65 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E21B246D07F10002BB65 /* Array.swift */; };
 		75639955246A781E00CDA729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75639954246A781E00CDA729 /* AppDelegate.swift */; };
 		75639957246A781E00CDA729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75639956246A781E00CDA729 /* SceneDelegate.swift */; };
 		75639959246A781E00CDA729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75639958246A781E00CDA729 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		7536E210246B6DB10002BB65 /* Ships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ships.swift; sourceTree = "<group>"; };
 		7536E215246B880C0002BB65 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		7536E217246B88310002BB65 /* PlacementResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementResult.swift; sourceTree = "<group>"; };
+		7536E219246CE85B0002BB65 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		7536E21B246D07F10002BB65 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		75639951246A781E00CDA729 /* BattleshipUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleshipUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75639954246A781E00CDA729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75639956246A781E00CDA729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				75639958246A781E00CDA729 /* ViewController.swift */,
 				7536E212246B6DDE0002BB65 /* Board */,
 				75639989246A782E00CDA729 /* Set.swift */,
+				7536E219246CE85B0002BB65 /* Matrix.swift */,
+				7536E21B246D07F10002BB65 /* Array.swift */,
 				7563995A246A781E00CDA729 /* Main.storyboard */,
 				7563995D246A782100CDA729 /* Assets.xcassets */,
 				7563995F246A782100CDA729 /* LaunchScreen.storyboard */,
@@ -306,6 +312,7 @@
 				7536E20F246B6D510002BB65 /* Pixels.swift in Sources */,
 				7536E218246B88310002BB65 /* PlacementResult.swift in Sources */,
 				7563998E246A782E00CDA729 /* Placements.swift in Sources */,
+				7536E21C246D07F10002BB65 /* Array.swift in Sources */,
 				75639959246A781E00CDA729 /* ViewController.swift in Sources */,
 				7536E20D246B6D190002BB65 /* BoardPrimitives.swift in Sources */,
 				7536E20B246B6CB10002BB65 /* BoardCoordinate.swift in Sources */,
@@ -315,6 +322,7 @@
 				7563998D246A782E00CDA729 /* Board.swift in Sources */,
 				7563998C246A782E00CDA729 /* Pixel.swift in Sources */,
 				7563998B246A782E00CDA729 /* Placement.swift in Sources */,
+				7536E21A246CE85B0002BB65 /* Matrix.swift in Sources */,
 				7536E211246B6DB10002BB65 /* Ships.swift in Sources */,
 				7563998F246A782E00CDA729 /* Set.swift in Sources */,
 				7536E216246B880C0002BB65 /* Rectangle.swift in Sources */,

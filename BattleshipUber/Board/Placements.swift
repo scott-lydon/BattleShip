@@ -23,18 +23,11 @@ extension Array where Element == Board.Placement {
     }
     
     typealias CoordinateAction = (Board.Coordinate, Board.Placement) -> Void
-    
-    /// Test 1
+
     func iterate(coordinateAction: CoordinateAction) {
-        forEach {
-            let start = $0.topLeft
-            for int in 0...$0.ship.length {
-                switch $0.direction {
-                case .down:
-                    coordinateAction(Board.Coordinate(x: start.x + int, y: start.y), $0)
-                case .right:
-                    coordinateAction(Board.Coordinate(x: start.x, y: start.y + int), $0)
-                }
+        forEach { placement in
+            placement.coordinates.forEach { coordinate in
+                coordinateAction(coordinate, placement)
             }
         }
     }

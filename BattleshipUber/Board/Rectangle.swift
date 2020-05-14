@@ -14,7 +14,6 @@ extension Board {
         var width: Int
         var height: Int
         
-        /// Test 2
         func contains(_ coordinate: Coordinate) -> Bool {
             return 0 <= coordinate.x && coordinate.x < height &&
                 0 <= coordinate.y && coordinate.y < width

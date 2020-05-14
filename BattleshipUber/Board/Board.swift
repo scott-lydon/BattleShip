@@ -36,20 +36,14 @@ struct Board  {
     }
     
     mutating func attack(coordinate: Coordinate) -> MissleResult {
-        if attackSpots.contains(coordinate) {
+        guard attackSpots.contains(coordinate) else {
             return .redundant
-        } else {
-            attackSpots.insert(coordinate)
-            if let ship = placements.first(where: { $0.contains(coordinate) }) {
-                if ship.sinks(from: attackSpots) {
-                    return .sink
-                } else {
-                    return .hit
-                }
-            } else {
-                return .miss
-            }
         }
+        attackSpots.insert(coordinate)
+        guard let ship = placements.first(where: { $0.contains(coordinate) }) else {
+            return .miss
+        }
+        return ship.sinks(from: attackSpots) ? .sink : .hit
     }
 }
 

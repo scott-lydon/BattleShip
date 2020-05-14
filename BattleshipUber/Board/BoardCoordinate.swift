@@ -14,12 +14,10 @@ extension Board {
         var x: Int
         var y: Int
         
-        /// Test 6
         func down(_ int: Int) -> Coordinate {
             return Coordinate(x: x + int, y: y)
         }
         
-        /// Test 7 
         func right(_ int: Int) -> Coordinate {
             return Coordinate(x: x, y: y + 1)
         }
@@ -27,9 +25,9 @@ extension Board {
         func new(_ int: Int, in direction: Board.Direction) -> Coordinate {
             switch direction {
             case .down:
-                return right(int)
-            case .right:
                 return down(int)
+            case .right:
+                return right(int)
             }
         }
     }

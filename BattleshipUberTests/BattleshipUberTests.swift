@@ -42,40 +42,46 @@ class BattleshipUberTests: XCTestCase {
         Test2(input: [], input2: [], output: []),
     ]
     
-    var boardAttackTests: [Test2<Board, Board.Coordinate, Board.MissleResult>] = [
+    var boardAttackTests: [Test2<Board, Board.Coordinate, Board.MissleResult>] = []
+    var boardPlacementTests: [Test2<Board, Board.Placement, Board.PlacementResult>] = []
+    var boardSunkenShips: [Test<Board, [Ship]>] = []
+    var renderingTests: [Test<Board, Board.Pixels>] = []
+    var boardPlacementResultTests: [Test2<Bool, Bool, Board.PlacementResult>] = []
+    var boardCoordinateTestsDown: [Test2<Board.Coordinate, Int, Board.Coordinate>] = []
+    var boardCoordinateTestsRight:  [Test2<Board.Coordinate, Int, Board.Coordinate>] = []
+    var boardCoordinateTestNew:  [Test3<Board, Int, Board.Direction, Board.Coordinate>] = []
     
+    // [x][y]
+    var placementIterationTests: [Test<[Board.Placement], [Board.Coordinate]>] = []
+    var containsRectangleTests: [Test2<Board.Rectangle, Board.Coordinate, Bool>] = [
+        Test2(
+            input: Board.Rectangle(width: 1, height: 1),
+            input2: Board.Coordinate(x: 1, y: 1),
+            output: true
+        ),
+        Test2(
+            input: Board.Rectangle(width: 1, height: 1),
+            input2: Board.Coordinate(x: 1, y: 1),
+            output: true
+        ),
+        Test2(
+            input: Board.Rectangle(width: 1, height: 1),
+            input2: Board.Coordinate(x: 1, y: 1),
+            output: true
+        ),
+        Test2(
+            input: Board.Rectangle(width: 1, height: 1),
+            input2: Board.Coordinate(x: 1, y: 1),
+            output: true
+        ), 
     ]
+    var pixelsAddTests: [Test2<[Board.Pixel], [Board.Placement], [Board.Pixel]>] = []
+    var hitTests: [Test3<[Board.Pixel], [Board.Placement], [Board.Coordinate], [Board.Pixel]>] = []
+    var pixelPlacementsTests: [Test2<[Board.Pixel], [Board.Placement], [Board.Pixel]>] = []
+    var downTests: [Test2<Board, Int, Board.Coordinate>] = []
+    var rightTests: [Test2<Board, Int, Board.Coordinate>] = []
+    var newTests: [Test3<Board, Int, Board.Direction, Board.Coordinate>] = []
     
-    var boardPlacementTests: [Test2<Board, Board.Placement, Board.PlacementResult>] = [
-    
-    ]
-    
-    var boardSunkenShips: [Test<Board, [Ship]>] = [
-    
-    ]
-    
-    var renderingTests: [Test<Board, Board.Pixels>] = [
-    
-    ]
-    
-    var boardPlacementResultTests: [Test2<Bool, Bool, Board.PlacementResult>] = [
-    
-    ]
-    
-    var boardCoordinateTestsDown: [Test2<Board.Coordinate, Int, Board.Coordinate>] = [
-    
-    ]
-    
-    var boardCoordinateTestsRight:  [Test2<Board.Coordinate, Int, Board.Coordinate>] = [
-       
-    ]
-    
-    var boardCoordinateTestNew:  [Test3<Board, Int, Board.Direction, Board.Coordinate>] = [
-          
-    ]
-    
-    
-
     func testAll() {
         battleshipTests.forEach {
             XCTAssertEqual([Ship].sunkenShips($0.input, attackPoints: $0.input2), $0.output)
@@ -93,6 +99,9 @@ class BattleshipUberTests: XCTestCase {
         }
         renderingTests.forEach {
             XCTAssertEqual($0.input.rendering, $0.output)
+        }
+        containsRectangleTests.forEach {
+            XCTAssertEqual($0.input.contains($0.input2), $0.output)
         }
         
     }
